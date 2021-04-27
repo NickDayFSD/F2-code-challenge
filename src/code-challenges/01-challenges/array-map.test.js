@@ -12,6 +12,12 @@ test('turn an array of numbers into strings', () => {
   expect(output).toEqual(['2', '5', '100']);
 });
 
+test('Capitalize names', () => {
+  const input = ['john', 'JACOB', 'jinGleHeimer', 'schmidt'];
+  const output = doubleNumbers(input);
+  expect(output).toEqual(['john', 'JACOB', 'jinGleHeimer', 'schmidt']);
+});
+
 // test('test description here', () => {
 //   const input = [2, 5, 100];
 //   const output = doubleNumbers(input);
