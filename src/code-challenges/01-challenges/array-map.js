@@ -7,7 +7,8 @@ function stringNum(x) {
 }
 
 function capName(x) {
-  return x.toUpperCase();
+  const lower = x.toLowerCase();
+  return lower.charAt(0).toUpperCase() + lower.slice(1);
 }
 
 export function doubleNumbers(arr) {

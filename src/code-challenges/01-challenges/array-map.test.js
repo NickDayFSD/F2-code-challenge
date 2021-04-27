@@ -1,4 +1,4 @@
-import { doubleNumbers, stringyNumbers } from './array-map.js';
+import { doubleNumbers, stringyNumbers, capitalizeNames } from './array-map.js';
 
 test('take an array of numbers and double them', () => {
   const input = [2, 5, 100];
@@ -14,8 +14,8 @@ test('turn an array of numbers into strings', () => {
 
 test('Capitalize names', () => {
   const input = ['john', 'JACOB', 'jinGleHeimer', 'schmidt'];
-  const output = doubleNumbers(input);
-  expect(output).toEqual(['john', 'JACOB', 'jinGleHeimer', 'schmidt']);
+  const output = capitalizeNames(input);
+  expect(output).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']);
 });
 
 // test('test description here', () => {
