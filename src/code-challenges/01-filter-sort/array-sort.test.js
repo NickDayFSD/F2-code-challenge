@@ -2,7 +2,8 @@ import {
   leastToGreatest,
   greatestToLeast,
   lengthSort,
-  alphabetical
+  alphabetical,
+  byAge
 } from './array-sort.js';
 
 test('sort lowest to greatest', () => {
@@ -27,4 +28,20 @@ test('sorts words alphabetically', () => {
   const input = ['dog', 'wolf', 'by', 'family', 'eaten'];
   const output = alphabetical(input);
   expect(output).toEqual(['by', 'dog', 'eaten', 'family', 'wolf']);
+});
+
+test('sort by age', () => {
+  const input = [
+    { name: 'Quiet Samurai', age: 22 },
+    { name: 'Arrogant Ambassador', age: 100 },
+    { name: 'Misunderstood Observer', age: 2 },
+    { name: 'Unlucky Swami', age: 77 }
+  ];
+  const output = byAge(input);
+  expect(output).toEqual([
+    { name: 'Misunderstood Observer', age: 2 },
+    { name: 'Quiet Samurai', age: 22 },
+    { name: 'Unlucky Swami', age: 77 },
+    { name: 'Arrogant Ambassador', age: 100 }
+  ]);
 });
