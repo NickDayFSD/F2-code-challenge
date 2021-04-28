@@ -5,3 +5,7 @@ export function evensOnly(arr) {
 export function fiveCharactersOrFewerOnly(arr) {
   return arr.filter(word => word.length < 6);
 }
+
+export function peopleWhoBelongToTheIlluminati(arr) {
+  return arr.filter(member => member.member === true);
+}
