@@ -1,7 +1,8 @@
 import {
   leastToGreatest,
   greatestToLeast,
-  lengthSort
+  lengthSort,
+  alphabetical
 } from './array-sort.js';
 
 test('sort lowest to greatest', () => {
@@ -20,4 +21,10 @@ test('sort by length', () => {
   const input = ['dog', 'wolf', 'by', 'family', 'eaten'];
   const output = lengthSort(input);
   expect(output).toEqual(['by', 'dog', 'wolf', 'eaten', 'family']);
+});
+
+test('sorts words alphabetically', () => {
+  const input = ['dog', 'wolf', 'by', 'family', 'eaten'];
+  const output = alphabetical(input);
+  expect(output).toEqual(['by', 'dog', 'eaten', 'family', 'wolf']);
 });
