@@ -11,21 +11,13 @@ export function makeArray(obj) { // updateNumbers is a stupid name
 }
 
 export function totalCharacters(arr) {
-  let charCount = [];
-  let trueCount = 0;
-  // loop through array
-  for (let obj of arr) {
-    delete obj.house;
-    trueCount += obj.children.length;
-    delete obj.children;
-    const values = Object.values(obj);
-    for (let name of values) {
-      if (name !== null) {
-        charCount.push(name);
-      }
-    }
-    trueCount += charCount.length;
-  }
-  return trueCount;
-  // count all values
+  let count = 0;
+
+  Object.values(arr).forEach(character => {
+    count++;
+    if (character.spouse) count++;
+    count += character.children.length;
+  });
+
+  return count;
 }
