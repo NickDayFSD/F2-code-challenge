@@ -36,3 +36,9 @@ export function hasChildrenEntries(arr, character) {
   });
   return hasChildren;
 }
+
+export function sortByChildren(arr) {
+  return arr.sort((a, b) => {
+    return a.children.length - b.children.length || a.house + b.house;
+  });
+}
