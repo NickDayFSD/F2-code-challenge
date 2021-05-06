@@ -1,5 +1,6 @@
 import {
   getHouses,
+  hasChildrenEntries,
   makeArray,
   totalCharacters
 } from './more-object-keys-entries.js';
@@ -106,4 +107,57 @@ test('this is a headcount', () => {
   ]; //arrange
   const output = totalCharacters(characters); //act
   expect(output).toBe(26); //assert
+});
+
+test('checks if a character has children', () => {
+  const characters = [
+    {
+      name: 'Eddard',
+      spouse: 'Catelyn',
+      children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+      house: 'Stark' // 7
+    },
+    {
+      name: 'Jon A.',
+      spouse: 'Lysa',
+      children: ['Robin'],
+      house: 'Arryn' // 3
+    },
+    {
+      name: 'Cersei',
+      spouse: 'Robert',
+      children: ['Joffrey', 'Myrcella', 'Tommen'],
+      house: 'Lannister' // 5
+    },
+    {
+      name: 'Daenarys',
+      spouse: 'Khal Drogo',
+      children: ['Drogon', 'Rhaegal', 'Viserion'],
+      house: 'Targaryen' // 5
+    },
+    {
+      name: 'Mace',
+      spouse: 'Alerie',
+      children: ['Margaery', 'Loras'],
+      house: 'Tyrell' // 4
+    },
+    {
+      name: 'Euron',
+      spouse: null,
+      children: [],
+      house: 'Greyjoy' //1
+    },
+    {
+      name: 'Jon S.',
+      spouse: null,
+      children: [],
+      house: 'Snow' //1
+    }
+  ]; //arrange
+  const Eddard = hasChildrenEntries(characters, 'Eddard');
+  console.log(Eddard);
+  const Euron = hasChildrenEntries(characters, 'Euron'); //act
+  console.log(Euron);
+  expect(Eddard).toEqual(true);
+  expect(Euron).toEqual(false); //assert
 });

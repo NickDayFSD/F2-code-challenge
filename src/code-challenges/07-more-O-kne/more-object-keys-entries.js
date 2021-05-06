@@ -21,3 +21,18 @@ export function totalCharacters(arr) {
 
   return count;
 }
+
+export function hasChildrenEntries(arr, character) {
+  // loop through array
+  let hasChildren;
+  Object.values(arr).forEach(lord => {
+    if (lord.name === character) {
+      if (lord.children.length > 0) {
+        return hasChildren = true;
+      } else {
+        return hasChildren = false;
+      }
+    }
+  });
+  return hasChildren;
+}
