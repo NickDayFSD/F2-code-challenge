@@ -25,7 +25,11 @@ export function listFoods(recipe) {
 }
 
 export function stepActions(recipe) {
-
+  const actions = [];
+  for (let direction of recipe.steps) {
+    actions.push(direction.split(' ')[0]);
+  }
+  return actions;
 }
 
 export function removeLastCharacters(str, num) {
