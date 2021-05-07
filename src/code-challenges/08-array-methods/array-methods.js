@@ -1,3 +1,5 @@
+import { stringyNumbers } from '../01-map/array-map';
+
 export function howMuchPencil(str) {
   const strArray = [str];
   let sharp = str;
@@ -21,8 +23,9 @@ export function stepActions(recipe) {
 
 }
 
-export function removeLastCharacters(str, numberOfCharacters) {
-
+export function removeLastCharacters(str, num) {
+  if (num >= 1) return str.slice(0, -num);
+  return str;
 }
 
 // stretch goals 
