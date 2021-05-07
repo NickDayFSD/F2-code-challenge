@@ -8,8 +8,9 @@ export function howMuchPencil(str) {
   return strArray;
 }
 
-export function wordsToCharList(arr) {
-
+export function wordsToCharList(str) {
+  const chars = str.split('');
+  return chars;
 }
 
 export function listFoods(recipe) {

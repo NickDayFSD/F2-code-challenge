@@ -37,7 +37,7 @@ test('howMuchPencil should return a list of shortening words', () => {
   expect(howMuchPencil('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
 });
 
-test.skip('wordsToCharList should return a list of characters', () => {
+test('wordsToCharList should return a list of characters', () => {
   expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
   expect(wordsToCharList('Gregor').length).toStrictEqual(6);
   expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
