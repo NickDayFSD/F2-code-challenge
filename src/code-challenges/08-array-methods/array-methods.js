@@ -16,7 +16,12 @@ export function wordsToCharList(str) {
 }
 
 export function listFoods(recipe) {
-
+  const shoppingList = [];
+  for (let mItem of recipe.ingredients) {
+    const item = mItem.split(' ').slice(2).join(' ');
+    shoppingList.push(item);
+  }
+  return shoppingList;
 }
 
 export function stepActions(recipe) {
@@ -30,13 +35,14 @@ export function removeLastCharacters(str, num) {
 
 // stretch goals 
 export function totalSumCSV(str) {
-
+  // string.split
+  // arr.reduce
 }
 
 export function removeVowels(str) {
-
+  // string.replace
 }
 
 export function extractVowels(str) {
-
+  // string.match
 }
