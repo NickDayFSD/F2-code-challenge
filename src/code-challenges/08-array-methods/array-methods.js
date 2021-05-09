@@ -46,7 +46,7 @@ export function totalSumCSV(str) {
 }
 
 export function removeVowels(str) {
-  // string.replace
+  return str.replace(/a|e|i|o|u/g, '');
 }
 
 export function extractVowels(str) {
