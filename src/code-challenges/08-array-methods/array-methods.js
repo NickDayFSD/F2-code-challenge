@@ -50,5 +50,8 @@ export function removeVowels(str) {
 }
 
 export function extractVowels(str) {
-  // string.match
+  const result = [];
+  result.push(str.replace(/a|e|i|o|u/g, ''));
+  result.push(str.match(/a|e|i|o|u/g).join(''));
+  return result;
 }
