@@ -39,8 +39,10 @@ export function removeLastCharacters(str, num) {
 
 // stretch goals 
 export function totalSumCSV(str) {
-  // string.split
-  // arr.reduce
+  if (!str.includes(',')) {
+    return Number(str);
+  }
+  return str.split(',').reduce((a, b) => Number(a) + Number(b));
 }
 
 export function removeVowels(str) {
