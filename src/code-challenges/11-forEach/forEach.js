@@ -3,7 +3,11 @@ export function returnTen(str) {
 }
 
 export function findMax(matrix) {
-
+  const highNum = [];
+  matrix.forEach(arr => {
+    highNum.push(Math.max(...arr));
+  });
+  return Math.max(...highNum);
 }
 
 export function totalSum(matrix) {

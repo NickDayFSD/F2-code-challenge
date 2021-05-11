@@ -7,7 +7,7 @@ test('returnTen should return the last 10 characters of a string as an array', (
   expect(returnTen('world')).toStrictEqual(['w', 'o', 'r', 'l', 'd']);
 });
 
-test.skip('findMax takes in a matrix of positive numbers and returns the number with the highest value', () => {
+test('findMax takes in a matrix of positive numbers and returns the number with the highest value', () => {
   expect(findMax([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(24);
 });
 
