@@ -11,7 +11,7 @@ test('findMax takes in a matrix of positive numbers and returns the number with 
   expect(findMax([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(24);
 });
 
-test.skip('totalSum takes in a matrix of positive numbers and returns the sum of all the numbers', () => {
+test('totalSum takes in a matrix of positive numbers and returns the sum of all the numbers', () => {
   expect(totalSum([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(81);
   expect(totalSum([])).toStrictEqual(0);
 });

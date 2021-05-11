@@ -11,7 +11,11 @@ export function findMax(matrix) {
 }
 
 export function totalSum(matrix) {
-
+  let totalSum = 0;
+  matrix.forEach(arr => {
+    totalSum += arr.reduce((a, b) => a + b);
+  });
+  return totalSum;
 }
 
 export function grandTotal(stores) {
