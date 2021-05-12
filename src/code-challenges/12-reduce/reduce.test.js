@@ -1,7 +1,8 @@
 import {
   toLastNames,
   addValues,
-  addPurchases
+  addPurchases,
+  countNumberOfElements
 } from './reduce.js';
 
 test('Collects names into an array', () => {
@@ -31,4 +32,10 @@ test('Totals spending on objects in array', () => {
   }];
   const output = addPurchases(input);
   expect(output).toEqual(1197);
+});
+
+test('Gets .length without .length', () => {
+  const input = ['just', 1, 'more', { counter: 'counter' }];
+  const output = countNumberOfElements(input);
+  expect(output).toEqual(input.length);
 });

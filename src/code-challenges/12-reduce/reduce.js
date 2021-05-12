@@ -17,3 +17,9 @@ export const addPurchases = arr => {
   });
   return spending.reduce((a, b) => a + b);
 };
+
+export const countNumberOfElements = arr => {
+  let count = 0;
+  arr.forEach(() => count++);
+  return count;
+};
