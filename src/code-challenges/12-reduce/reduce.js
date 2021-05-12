@@ -10,3 +10,10 @@ export const toLastNames = people => {
 export const addValues = arr => {
   return arr.reduce((a, b) => a + b);
 };
+
+export const addPurchases = arr => {
+  const spending = arr.map(obj => {
+    return obj.purchasePrice;
+  });
+  return spending.reduce((a, b) => a + b);
+};
