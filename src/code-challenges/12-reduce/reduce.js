@@ -6,3 +6,7 @@ export const toLastNames = people => {
   }
   return result;
 };
+
+export const addValues = arr => {
+  return arr.reduce((a, b) => a + b);
+};
