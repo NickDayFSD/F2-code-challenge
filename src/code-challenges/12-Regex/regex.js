@@ -1,3 +1,3 @@
-export function sortByChildren(arr) {
+export function sortByChildren(charArray) {
 
 }
