@@ -23,3 +23,11 @@ export const countNumberOfElements = arr => {
   arr.forEach(() => count++);
   return count;
 };
+
+export const returnNames = arr => {
+  return arr.reduce((accumulator, person) => {
+    accumulator.push(person.name);
+    console.log(accumulator);
+    return accumulator;
+  }, []);
+};
