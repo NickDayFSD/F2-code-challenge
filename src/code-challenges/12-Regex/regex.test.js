@@ -2,7 +2,8 @@ import {
   sortByChildren,
   containsW,
   isNum,
-  containsWorld
+  containsWorld,
+  isCapitalized
 } from './regex.js';
 
 let characters = [
@@ -73,4 +74,10 @@ test('test notes here', () => {
   expect(containsWorld('hello world')).toBe(true);
   expect(containsWorld('Hello World')).toBe(false);
   expect(containsWorld('hello everyone')).toBe(false);
+});
+
+test('test notes here', () => {
+  expect(isCapitalized('We only want to Return the Words that begin With a capital Letter')).toEqual(['We', 'Return', 'Words', 'With', 'Letter']);
+  expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
+  expect(isCapitalized('these words are all failures')).toEqual([]);
 });

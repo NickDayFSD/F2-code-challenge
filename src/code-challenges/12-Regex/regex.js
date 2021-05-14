@@ -21,3 +21,10 @@ export const containsWorld = (input) => {
   }
   return false;
 };
+
+export const isCapitalized = (str) => {
+  const regex = (/([A-Z])\w+/g);
+  let words = str.match(regex);
+  return words || [];
+
+};
