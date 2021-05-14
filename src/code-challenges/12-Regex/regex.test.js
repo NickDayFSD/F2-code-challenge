@@ -1,6 +1,7 @@
 import {
   sortByChildren,
-  containsW
+  containsW,
+  isNum
 } from './regex.js';
 
 let characters = [
@@ -57,4 +58,12 @@ test('returns true when lowercase w is found in string', () => {
   expect(containsW('hello world')).toBe(true);
   expect(containsW('Hello World')).toBe(false);
   expect(containsW('hello everyone')).toBe(false);
+});
+
+test('numbers true/false', () => {
+  expect(isNum(1234567890)).toBe(true);
+  expect(isNum('12345')).toBe(true);
+  expect(isNum('h3llo w0rld')).toBe(true);
+  expect(isNum('hello world')).toBe(false);
+  expect(isNum('')).toBe(false);
 });
