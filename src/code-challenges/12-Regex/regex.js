@@ -26,5 +26,11 @@ export const isCapitalized = (str) => {
   const regex = (/([A-Z])\w+/g);
   let words = str.match(regex);
   return words || [];
+};
 
+export const citiesAtoJ = (arr) => {
+  const regex = (/^[A-J]/);
+  return arr.filter(city => {
+    return regex.test(city);
+  });
 };

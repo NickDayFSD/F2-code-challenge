@@ -3,7 +3,8 @@ import {
   containsW,
   isNum,
   containsWorld,
-  isCapitalized
+  isCapitalized,
+  citiesAtoJ
 } from './regex.js';
 
 let characters = [
@@ -80,4 +81,10 @@ test('test notes here', () => {
   expect(isCapitalized('We only want to Return the Words that begin With a capital Letter')).toEqual(['We', 'Return', 'Words', 'With', 'Letter']);
   expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
   expect(isCapitalized('these words are all failures')).toEqual([]);
+});
+
+test('test notes here', () => {
+  expect(citiesAtoJ(['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'])).toEqual(['Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken']);
+  expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(['Albuquerque', 'Chicago', 'Eugene']);
+  expect(citiesAtoJ([])).toEqual([]);
 });
