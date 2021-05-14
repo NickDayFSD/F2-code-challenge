@@ -1,7 +1,8 @@
 import {
   sortByChildren,
   containsW,
-  isNum
+  isNum,
+  containsWorld
 } from './regex.js';
 
 let characters = [
@@ -66,4 +67,10 @@ test('numbers true/false', () => {
   expect(isNum('h3llo w0rld')).toBe(true);
   expect(isNum('hello world')).toBe(false);
   expect(isNum('')).toBe(false);
+});
+
+test('test notes here', () => {
+  expect(containsWorld('hello world')).toBe(true);
+  expect(containsWorld('Hello World')).toBe(false);
+  expect(containsWorld('hello everyone')).toBe(false);
 });

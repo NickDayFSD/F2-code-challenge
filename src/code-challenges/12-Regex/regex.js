@@ -14,3 +14,10 @@ export const containsW = (str) => {
 export const isNum = (input) => {
   return /\d/.test(input);
 };
+
+export const containsWorld = (input) => {
+  if (input.match(/world/)) {
+    return true;
+  }
+  return false;
+};
